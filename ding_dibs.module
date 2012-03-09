@@ -172,7 +172,7 @@ function ding_dibs_payment_prepare($amount, $params, $callback, $redirect = TRUE
   $params += array(
     'order_info_short' => t('Payment of library dues'),
     'order_price_info' => array('Total' => $amount),
-    // pjo adding info 
+    // pjo adding info
     // @todo; verify that name and email is actually shown on dibs admin
     'customer_name' => $user->data['display_name'],
     'customer_email' => $user->mail,
@@ -295,12 +295,12 @@ function ding_dibs_block_view($delta = '') {
         if ( array_key_exists($card,$cards) ) {
           $supported_cards[] = theme_image( array(
               'path' => base_path() . drupal_get_path('module', 'ding_dibs') . '/img/card_logos/' . $cards[$card],
-              'height' => '33px',
+              'height' => '33',
               'alt' => $card,
               'title' => $card,
               'attributes' => array('class'=>'card-logo'),
             )
-          ) . '<span class="card-name">' . $card . '</span></p>';
+          ) . '<span class="card-name">' . $card . '</span>';
         }
       }
     }
